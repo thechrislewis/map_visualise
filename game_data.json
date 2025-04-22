@@ -1,0 +1,81 @@
+{
+    "intro": "Welcome",
+    "start": "Hall",
+    "rooms": {
+        "Hall": {
+            "Desc": "The start of the journey",
+            "North": "Library",
+            "East": "Dining Room",
+            "West": "Pool",
+            "South": "Store Room"
+        },
+        "Library": {
+            "Desc": "The Library is full of many old musty books but lurcking behind a book case is a blind monster.",
+            "South": "Hall",
+            "North": "Mr Yaps Shop"
+        },
+        "Store Room": {
+            "Desc": "A Store Room",
+            "North": "Hall"
+        },
+        "Lift": {
+            "Desc": "A posh, golden rimmed lift with a welcoming light",
+            "Up": "Observatory",
+            "Out": "Dining Room"
+        },
+        "Observatory": {
+            "Desc": "A round room with a large telescope",
+            "Down": "Lift"
+        },
+        "Pool": {
+            "Desc": "A large ,dimly lit room with a pool",
+            "East": "Hall",
+            "South": "Changing Rooms"
+        },
+        "Changing Rooms": {
+            "Desc": "A dark ,large locker filled room. It has the numbers 8915 on the wall",
+            "North": "Pool"
+        },
+        "Mr Yaps Shop": {
+            "Desc":"A room with a shop owned by Mr Yap",
+            "South": "Library",
+            "East": "Courtyard"
+        },
+        "Courtyard": {
+            "Desc": "A large open room to the outside",
+            "East": "Greenhouse",
+            "West": "Mr Yaps Shop"
+        },
+        "Greenhouse": {
+            "Desc": "A glass ,humid room full of plants",
+            "West": "Courtyard",
+            "East": "Cave"
+        },
+        "Dining Room":{
+            "Desc":"A large room filled with round fancy looking tables",
+            "East":"Kitchen",
+            "West":"Hall"
+        }, 
+        "Kitchen":{
+            "Desc":"A white tiled room full of smoke a mystirious shape is moving around the place",
+            "West":"Dining Room",
+            "Item":"Frying Pan"
+        }, 
+        "Cave":{"Desc":"A  small crack in the wall to reveal a dark ,empty and wet cave",
+            "West":"Greenhouse",
+            "East":"Deeper Cave"
+        }, 
+        "Deeper Cave":{
+            "Desc":"The cave continues to a large dark cave where ??? stops you from going deeper",
+            "East":"Deepest Cave"
+        }, 
+        "Deepest Cave":{
+            "Desc":"A large cave where lots of magical cyristals line the walls but ??? lies on the floor",
+            "East":"Portal"
+        },
+        "Portal": {
+            "Desc": "A portal that takes you somewhere",
+            "East": "Hall"
+        }
+    }
+}
