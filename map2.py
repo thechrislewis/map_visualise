@@ -7,10 +7,15 @@
 import tkinter as tk
 import json
 
-# Load room data from the JSON file
-with open("game_data.json") as f:
-    data = json.load(f)
+# Load room data uncomment as required
+datafile = "star_wars.json"
+#datafile = "game_data.json"
+#datafile = "game_data.json3"
 
+
+with open(datafile) as f:
+    data = json.load(f)
+    
 rooms = data["rooms"]
 
 directions = ["North","South","East","West","Up","Down","Out"]
@@ -26,17 +31,18 @@ direction_offsets = {
     "Out": (-1, -1) 
 }
 
-
+w = 1200
+h = 800
 
 # Tkinter window setup
 root = tk.Tk()
 root.title("Room Map Viewer")
 
-canvas = tk.Canvas(root, width=1200, height=800, bg="white")
+canvas = tk.Canvas(root, width=w, height=h, bg="white")
 canvas.pack()
 
 
-x0, y0 = 500, 400  # Center starting coordinates
+x0, y0 = 500, 600  # Center starting coordinates
 
 room_coords = {}  # Store coordinates of each room to draw connections
 sizex = 40 # size of box to draw
