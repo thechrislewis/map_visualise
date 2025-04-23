@@ -8,7 +8,7 @@ import tkinter as tk
 import json
 
 # Load room data from the JSON file
-with open("game_data.json3") as f:
+with open("game_data.json") as f:
     data = json.load(f)
 
 rooms = data["rooms"]
@@ -36,7 +36,7 @@ canvas = tk.Canvas(root, width=1200, height=800, bg="white")
 canvas.pack()
 
 
-x0, y0 = 300, 400  # Center starting coordinates
+x0, y0 = 500, 400  # Center starting coordinates
 
 room_coords = {}  # Store coordinates of each room to draw connections
 sizex = 40 # size of box to draw
