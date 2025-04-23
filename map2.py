@@ -8,7 +8,7 @@ import tkinter as tk
 import json
 
 # Load room data from the JSON file
-with open("game_data.json") as f:
+with open("game_data.json3") as f:
     data = json.load(f)
 
 rooms = data["rooms"]
@@ -23,7 +23,7 @@ direction_offsets = {
     "West": (-1, 0),    #left
     "Up": (1, -1),      #up-right
     "Down": (-1, 1),    #down-left
-    "Out": (-5, 0) 
+    "Out": (-1, -1) 
 }
 
 
@@ -56,7 +56,7 @@ def draw_room(name, x, y):
     items = rooms[name].get("Item", [])
     if items:
         item_text = items
-        canvas.create_text(x, y + 10, text=item_text, font=("Arial", 7), fill="black")
+        canvas.create_text(x, y + 10, text=item_text, font=("Arial", 7), fill="blue")
 
     #print enemies in the room
     enemies = rooms[name].get("Enemy", [])
@@ -64,7 +64,7 @@ def draw_room(name, x, y):
         enemy_text = enemies
         canvas.create_text(x, y + 20, text=enemy_text, font=("Arial", 7), fill="red")
 
-def draw_connection(from_room, to_room, direction):
+def draw_connection(from_room, to_room, direction, label=True):
 
     # only draw a connection if we've drawn it
     if to_room not in room_coords:  #room_coords are only added when we draw it ( see draw_room() function above )
@@ -74,9 +74,10 @@ def draw_connection(from_room, to_room, direction):
     x2, y2 = room_coords[to_room]
     canvas.create_line(x1, y1, x2, y2, arrow=tk.LAST)
     
-    # draw direction in middle of line
-    mid_x, mid_y = (x1 + x2) // 2, (y1 + y2) // 2
-    #canvas.create_text(mid_x, mid_y - 10, text=direction, font=("Arial", 6), fill="grey")
+    # draw direction in middle of line if required
+    if label:
+        mid_x, mid_y = (x1 + x2) // 2, (y1 + y2) // 2
+        canvas.create_text(mid_x, mid_y - 10, text=direction, font=("Arial", 6), fill="grey")
     
 # RECURSIVE function to place room and connections
 def place_room(name, x, y):
@@ -106,10 +107,12 @@ def place_room(name, x, y):
             place_room(target, new_x, new_y)
 
         #now connect together
-        draw_connection(name, target, direction)
+        draw_connection(name, target, direction, label=False)
 
 # Start drawing from the starting room
-start_room = data.get("start") 
+start_room = data.get("start","No start room")
+canvas.create_text(30, 30, text=start_room, font=("Arial", 20), justify="center")
+
 place_room(start_room, x0, y0)
 
 root.mainloop()

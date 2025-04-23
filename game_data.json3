@@ -1,0 +1,164 @@
+{
+  "intro": "A princess has gone missing in a once-glorious magical kingdom. Rumors whisper that she is held captive in the castle's deepest chamber.",
+  "start": "Hall",
+  "rooms": {
+    "Hall": {
+      "Desc": "The grand central chamber of the castle. Four large archways lead in each direction.",
+      "North": "North Wing Corridor",
+      "South": "South Wing Corridor",
+      "East": "East Wing Corridor",
+      "West": "West Wing Corridor"
+    },
+
+    "North Wing Corridor": {
+      "Desc": "A long hallway lined with portraits of the royal lineage.",
+      "South": "Hall",
+      "North": "Library"
+    },
+    "Library": {
+      "Desc": "The Library is full of old books. A secret passage lies behind a shifting bookcase.",
+      "South": "North Wing Corridor",
+      "North": "Wizard’s Study"
+    },
+    "Wizard’s Study": {
+      "Desc": "Scrolls, potions, and a glowing orb. The wizard’s presence lingers.",
+      "South": "Library",
+      "Enemy": "Shadow Raven"
+    },
+
+    "South Wing Corridor": {
+      "Desc": "Dimly lit and lined with old weapons on the walls.",
+      "North": "Hall",
+      "South": "Crypt"
+    },
+    "Crypt": {
+      "Desc": "Tombs cracked open. The air smells of decay.",
+      "North": "South Wing Corridor",
+      "East": "Chapel",
+      "Enemy": "Restless Knight"
+    },
+    "Chapel": {
+      "Desc": "A sacred space now defiled. The stained glass shows the princess in prayer.",
+      "West": "Crypt",
+      "North": "Tower Prison",
+      "Item": "Blessed Amulet"
+    },
+    "Tower Prison": {
+      "Desc": "At the top of the tower, a single door is locked tight. Muffled sobs are heard.",
+      "South": "Chapel",
+      "Requires": "Silver Key",
+      "Item": "Princess"
+    },
+
+    "East Wing Corridor": {
+      "Desc": "Elegant arches and cracked marble floors echo past grandeur.",
+      "West": "Hall",
+      "East": "Dining Room"
+    },
+    "Dining Room": {
+      "Desc": "A long-abandoned feast rots on the table. A note is tucked beneath a goblet.",
+      "West": "East Wing Corridor",
+      "East": "Ballroom",
+      "North": "Kitchen",
+      "Item": "Torn Note"
+    },
+    "Ballroom": {
+      "Desc": "A vast room with ghostly music playing. The air is cold.",
+      "West": "Dining Room",
+      "East": "Throne Room",
+      "Enemy": "Phantom Dancer"
+    },
+    "Throne Room": {
+      "Desc": "The once-proud throne is covered in vines. A secret trapdoor is visible.",
+      "West": "Ballroom",
+      "Down": "Hidden Chamber"
+    },
+
+    "West Wing Corridor": {
+      "Desc": "The corridor is lined with shields and torches.",
+      "East": "Hall",
+      "West": "Armoury"
+    },
+    "Armoury": {
+      "Desc": "A room filled with ancient weapons. A shadowy enemy lurks here, guarding a key.",
+      "East": "West Wing Corridor",
+      "North": "Barracks",
+      "Item": "Sword",
+      "Enemy": "Armoured Wraith"
+    },
+    "Barracks": {
+      "Desc": "Dusty bunks and rusting armour remain. A helmet is still warm.",
+      "South": "Armoury",
+      "East": "Training Grounds"
+    },
+    "Training Grounds": {
+      "Desc": "Training dummies and weapon racks line the area. A broken staff lies here.",
+      "West": "Barracks",
+      "North": "Stables"
+    },
+    "Stables": {
+      "Desc": "Old stalls and horse bones. Something skitters in the hay.",
+      "South": "Training Grounds",
+      "Enemy": "Giant Rat"
+    },
+
+    "Hidden Chamber": {
+      "Desc": "Chains dangle from the ceiling. A crown rests on a pedestal.",
+      "Up": "Throne Room",
+      "Item": "Cursed Crown"
+    },
+
+    "Greenhouse": {
+      "Desc": "Overgrown vines and glowing mushrooms flourish here.",
+      "North": "Dining Room",
+      "Item": "Moonflower"
+    },
+    "Observatory": {
+      "Desc": "A glass dome reveals the stars. Charts litter the floor.",
+      "North": "Wizard’s Study",
+      "Item": "Star Map"
+    },
+    "Kitchen": {
+      "Desc": "Rusting pots and stale herbs remain. Something scuttles behind the pantry.",
+      "South": "Dining Room",
+      "Up": "Wine Cellar",
+      "Enemy": "Kitchen Imp"
+    },
+    "Wine Cellar": {
+      "Desc": "Rows of dusty bottles. One shelf looks oddly misaligned.",
+      "Down": "Kitchen"
+    },
+    "Scribe’s Room": {
+      "Desc": "Quills and parchment cover a long table. A glowing rune pulses faintly.",
+      "West": "Library"
+    },
+    "Alchemy Lab": {
+      "Desc": "Bubbling cauldrons and shattered glass. A potion glows on a pedestal.",
+      "East": "Wizard’s Study",
+      "Item": "Elixir of Clarity"
+    },
+    "Watchtower": {
+      "Desc": "From here, the whole valley can be seen. A hawk circles overhead.",
+      "Up": "Barracks",
+      "Item": "Signal Flare"
+    },
+    "Garden Path": {
+      "Desc": "A twisting trail through fragrant blooms and thorny vines.",
+      "South": "Greenhouse"
+    },
+    "Mirror Hall": {
+      "Desc": "Endless mirrors reflect you from all directions. One image doesn’t match.",
+      "East": "Ballroom",
+      "Enemy": "Mimic Reflection"
+    },
+    "Dungeon Antechamber": {
+      "Desc": "Dark and damp. The smell of fear hangs heavy.",
+      "South": "Crypt",
+      "North": "Dungeon Cell"
+    },
+    "Dungeon Cell": {
+      "Desc": "Chains on the walls. A message scratched into the stone reads: 'She is near.'",
+      "South": "Dungeon Antechamber"
+    }
+  }
+}

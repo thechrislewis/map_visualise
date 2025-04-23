@@ -2,23 +2,28 @@ import tkinter as tk
 import json
 
 # Load room data
-with open("game_data.json") as f:
+with open("game_data.json3") as f:
     data = json.load(f)
 
 rooms = data["rooms"]
 
 root = tk.Tk()
-canvas = tk.Canvas(root, width=800, height=600, bg="white")
+canvas = tk.Canvas(root, width=1200, height=800, bg="white")
 canvas.pack()
 
 # Place rooms in a grid-like layout
-x, y = 100, 100
+startx = 50
+starty = 50
+
+x, y = startx, starty
+stepx = 100
+stepy = 50
 for i, name in enumerate(rooms):
-    canvas.create_rectangle(x, y, x+100, y+50, fill="lightblue")
+    canvas.create_rectangle(x, y, x+stepx, y+stepy, fill="lightblue")
     canvas.create_text(x+50, y+25, text=name)
     x += 150
-    if x > 600:
-        x = 100
+    if x > 800:
+        x = startx
         y += 100
 
 root.mainloop()
