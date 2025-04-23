@@ -1,0 +1,169 @@
+{
+  "intro": "You are a rebel infiltrator aboard the Death Star. Your mission: sabotage the station from within and escape alive.",
+  "start": "Hangar Bay 17",
+  "rooms": {
+    "Hangar Bay 17": {
+      "Desc": "Massive starfighters are docked here. Alarms echo faintly.",
+      "North": "Security Checkpoint",
+      "Item": "Blaster Pistol"
+    },
+    "Security Checkpoint": {
+      "Desc": "Stormtroopers patrol the area. Keycards are required beyond this point.",
+      "South": "Hangar Bay 17",
+      "North": "Main Corridor",
+      "Enemy": "Stormtrooper Squad"
+    },
+    "Main Corridor": {
+      "Desc": "A wide hallway connecting major sectors of the Death Star.",
+      "South": "Security Checkpoint",
+      "East": "Detention Block",
+      "West": "Command Access",
+      "North": "Central Reactor Hub"
+    },
+
+    "Detention Block": {
+      "Desc": "Cells line the walls. One is still locked shut.",
+      "West": "Main Corridor",
+      "North": "Interrogation Room",
+      "Item": "Access Keycard"
+    },
+    "Interrogation Room": {
+      "Desc": "Bright lights and medical droids fill this cold, sterile room.",
+      "South": "Detention Block",
+      "Enemy": "Interrogation Droid"
+    },
+
+    "Command Access": {
+      "Desc": "Reinforced doors lead to the command sector.",
+      "East": "Main Corridor",
+      "West": "Bridge"
+    },
+    "Bridge": {
+      "Desc": "Vader’s command center. Monitors show every part of the station.",
+      "East": "Command Access",
+      "Item": "Station Map"
+    },
+
+    "Central Reactor Hub": {
+      "Desc": "Energy pulses through huge glowing cores.",
+      "South": "Main Corridor",
+      "North": "Reactor Control",
+      "East": "Fuel Conduit",
+      "West": "Power Maintenance"
+    },
+    "Reactor Control": {
+      "Desc": "A console awaits the code sequence for overload.",
+      "South": "Central Reactor Hub",
+      "Locked": true,
+      "Requires": "Override Code",
+      "Item": "Detonation Timer"
+    },
+    "Fuel Conduit": {
+      "Desc": "A narrow, dangerous shaft full of fuel lines.",
+      "West": "Central Reactor Hub",
+      "Enemy": "Probe Droid"
+    },
+    "Power Maintenance": {
+      "Desc": "Panels hum with unshielded energy. Tools are scattered.",
+      "East": "Central Reactor Hub",
+      "Item": "Override Code"
+    },
+
+    "Turbolift Station": {
+      "Desc": "A high-speed lift system connecting floors.",
+      "South": "Barracks",
+      "Up": "Hangar Control",
+      "Down": "Engineering"
+    },
+    "Barracks": {
+      "Desc": "Bunks and armor lockers. An officer’s log blinks.",
+      "North": "Turbolift Station",
+      "Item": "Thermal Detonator"
+    },
+    "Hangar Control": {
+      "Desc": "Controls for hangar force fields and tractor beams.",
+      "Down": "Turbolift Station",
+      "Item": "Tractor Beam Override"
+    },
+    "Engineering": {
+      "Desc": "Sparks fly from consoles. Tech crew uniforms lie discarded.",
+      "Up": "Turbolift Station",
+      "East": "Droid Maintenance"
+    },
+
+    "Droid Maintenance": {
+      "Desc": "Inactive droids line the walls. Tools and memory chips litter the floor.",
+      "West": "Engineering",
+      "Item": "Droid Disguise"
+    },
+
+    "Garbage Compactor": {
+      "Desc": "Foul stench and crushing walls. Something moves beneath the water.",
+      "North": "Refuse Access",
+      "Enemy": "Dianoga"
+    },
+    "Refuse Access": {
+      "Desc": "Trash chutes and maintenance hatches.",
+      "South": "Garbage Compactor",
+      "North": "Air Vent Network"
+    },
+    "Air Vent Network": {
+      "Desc": "Claustrophobic ducts. Echoes travel far.",
+      "South": "Refuse Access",
+      "East": "Observation Port"
+    },
+
+    "Observation Port": {
+      "Desc": "A vast window peers into space. TIE fighters zip past.",
+      "West": "Air Vent Network"
+    },
+
+    "TIE Fighter Bay": {
+      "Desc": "Racks of fighters stand ready. Pilots scramble.",
+      "North": "Hangar Control",
+      "Enemy": "TIE Pilot"
+    },
+
+    "Medical Bay": {
+      "Desc": "Sterile beds and bacta tanks. Medical supplies are stocked.",
+      "East": "Command Access",
+      "Item": "Bacta Injector"
+    },
+
+    "Escape Pod Bay": {
+      "Desc": "Pods line the walls, ready for emergency launch.",
+      "North": "Bridge",
+      "Item": "Launch Code"
+    },
+
+    "Storage Hold": {
+      "Desc": "Crates of weapons, armor, and mystery tech.",
+      "East": "Droid Maintenance",
+      "Item": "EMP Grenade"
+    },
+
+    "Holonet Chamber": {
+      "Desc": "A chamber filled with flickering holocomm transmissions.",
+      "North": "Main Corridor",
+      "Enemy": "Imperial Spy Droid"
+    },
+
+    "Officer’s Quarters": {
+      "Desc": "A tidy room with encrypted terminals and hidden drawers.",
+      "South": "Command Access",
+      "Item": "Security Clearance"
+    },
+
+    "Archives": {
+      "Desc": "Data vaults and storage columns glow softly.",
+      "West": "Library",
+      "Item": "Death Star Plans"
+    },
+
+    "Library": {
+      "Desc": "Stacks of Imperial doctrine and military schematics.",
+      "East": "Archives"
+    }
+  }
+}
+
