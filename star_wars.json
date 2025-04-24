@@ -24,12 +24,12 @@
     "Detention Block": {
       "Desc": "Cells line the walls. One is still locked shut.",
       "West": "Main Corridor",
-      "North": "Interrogation Room",
+      "East": "Interrogation Room",
       "Item": "Access Keycard"
     },
     "Interrogation Room": {
       "Desc": "Bright lights and medical droids fill this cold, sterile room.",
-      "South": "Detention Block",
+      "West": "Detention Block",
       "Enemy": "Interrogation Droid"
     },
 

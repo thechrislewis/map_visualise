@@ -53,16 +53,16 @@ visited = set()
 
 
 #draw the room as a rectangle shape
-def draw_room(name, x, y):
+def draw_room(name, x, y, colour):
     room_coords[name] = (x, y)
-    canvas.create_rectangle(x - sizex, y - sizey, x + sizex, y + sizey, fill="lightblue")
+    canvas.create_rectangle(x - sizex, y - sizey, x + sizex, y + sizey, fill=colour)
     canvas.create_text(x, y-30, text=name, font=("Arial", 8), justify="center")
 
     ## print items in the room
     items = rooms[name].get("Item", [])
     if items:
         item_text = items
-        canvas.create_text(x, y + 10, text=item_text, font=("Arial", 7), fill="blue")
+        canvas.create_text(x, y + 10, text=item_text, font=("Arial", 6), fill="blue")
 
     #print enemies in the room
     enemies = rooms[name].get("Enemy", [])
@@ -86,7 +86,7 @@ def draw_connection(from_room, to_room, direction, label=True):
         canvas.create_text(mid_x, mid_y - 10, text=direction, font=("Arial", 6), fill="grey")
     
 # RECURSIVE function to place room and connections
-def place_room(name, x, y):
+def place_room(name, x, y, colour="lightblue"):
 
     #if you've been here before then go back
     if name in visited:
@@ -94,7 +94,7 @@ def place_room(name, x, y):
     
     #add room to visited set and draw
     visited.add(name)
-    draw_room(name, x, y)
+    draw_room(name, x, y, colour)
 
     # loop through all exits and draw those
     for direction, target in rooms[name].items():
@@ -117,8 +117,7 @@ def place_room(name, x, y):
 
 # Start drawing from the starting room
 start_room = data.get("start","No start room")
-canvas.create_text(30, 30, text=start_room, font=("Arial", 20), justify="center")
 
-place_room(start_room, x0, y0)
+place_room(start_room, x0, y0, colour="limegreen")
 
 root.mainloop()
