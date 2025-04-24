@@ -29,7 +29,7 @@ canvas.pack()
 # the colour default is lightblue
 def draw_room( name, x, y, colour="lightblue"):
     canvas.create_rectangle(x, y, x+stepx, y+stepy, fill=colour)
-    canvas.create_text(x+50, y+25, text=name)    
+    canvas.create_text(x+50, y+25, text=name, font=("Arial", 8), justify="center")   
 
 
 # Place rooms in a grid-like layout
@@ -42,7 +42,7 @@ stepy = 50
 
 for i, name in enumerate(rooms):
     draw_room(name, x,y,colour="lightblue")
-    x += 150
+    x += (stepx * 1.1)
     if x >= w - 100:
         x = startx
         y += stepy * 2
