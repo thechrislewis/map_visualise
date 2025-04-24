@@ -8,7 +8,7 @@ import tkinter as tk
 import json
 
 # Load room data uncomment as required
-datafile = "star_wars.json"
+#datafile = "star_wars.json"
 #datafile = "game_data.json"
 #datafile = "game_data.json3"
 
@@ -31,6 +31,7 @@ direction_offsets = {
     "Out": (-1, -1) 
 }
 
+#width and height of window
 w = 1200
 h = 800
 
@@ -38,6 +39,7 @@ h = 800
 root = tk.Tk()
 root.title("Room Map Viewer")
 
+# we need a canvas widget to draw on
 canvas = tk.Canvas(root, width=w, height=h, bg="white")
 canvas.pack()
 
